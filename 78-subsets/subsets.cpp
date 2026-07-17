@@ -24,5 +24,6 @@ public:
         int index=0;
         solve(nums, output, index, ans);
         return ans;
+        //sync
     }
 };
