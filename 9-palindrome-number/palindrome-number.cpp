@@ -1,27 +1,21 @@
 class Solution {
 public:
     bool isPalindrome(int x) {
-        string s;
+        long long rev=0;
+        int num=x;
         while(x>0){
             int digit=x%10;
-            s=char(digit+'0')+s;
+            rev=(rev*10)+digit;
             x/=10;
         }
-    int i=0;
-    int j=s.length()-1;
-    if(x<0){
-        return false;
-    }
-    while(j>=i){
-        if(s[i]==s[j]){
-            i++;
-            j--;
+
+        if(rev==num){
+            return true;
         }
         else{
             return false;
         }
-    }
-    return true;
+       
         
     }
 };
